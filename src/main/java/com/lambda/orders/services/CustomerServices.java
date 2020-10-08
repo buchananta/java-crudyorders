@@ -8,6 +8,10 @@ public interface CustomerServices
 {
     Customer save(Customer customer);
 
+    Customer update(Customer customer, long id);
+
+    void delete(long id);
+
     List<Customer> findAllCustomers();
 
     List<Customer> findCustomerBySubName(String subName);

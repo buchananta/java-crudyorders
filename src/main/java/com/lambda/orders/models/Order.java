@@ -95,4 +95,9 @@ public class Order
     public void addPayment(Payment payment) {
         payments.add(payment);
     }
+
+    public Set<Payment> getPayments()
+    {
+        return payments;
+    }
 }

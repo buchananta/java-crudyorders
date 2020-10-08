@@ -8,6 +8,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "customers")
+@JsonIgnoreProperties(value = {"hasvalueforopeningamt",
+                               "hasvalueforreceiveamt",
+                               "hasvalueforpaymentamt",
+                               "hasvalueforoutstandingamt" })
 public class Customer
 {
     @Id
@@ -19,10 +23,10 @@ public class Customer
     private String workingarea;
     private String custcountry;
     private String grade;
-    private double openingamt;
-    private double receiveamt;
-    private double paymentamt;
-    private double outstandingamt;
+    private Double openingamt;
+    private Double receiveamt;
+    private Double paymentamt;
+    private Double outstandingamt;
     private String phone;
 
     @ManyToOne
@@ -115,42 +119,42 @@ public class Customer
         this.grade = grade;
     }
 
-    public double getOpeningamt()
+    public Double getOpeningamt()
     {
         return openingamt;
     }
 
-    public void setOpeningamt(double openingamt)
+    public void setOpeningamt(Double openingamt)
     {
         this.openingamt = openingamt;
     }
 
-    public double getReceiveamt()
+    public Double getReceiveamt()
     {
         return receiveamt;
     }
 
-    public void setReceiveamt(double receiveamt)
+    public void setReceiveamt(Double receiveamt)
     {
         this.receiveamt = receiveamt;
     }
 
-    public double getPaymentamt()
+    public Double getPaymentamt()
     {
         return paymentamt;
     }
 
-    public void setPaymentamt(double paymentamt)
+    public void setPaymentamt(Double paymentamt)
     {
         this.paymentamt = paymentamt;
     }
 
-    public double getOutstandingamt()
+    public Double getOutstandingamt()
     {
         return outstandingamt;
     }
 
-    public void setOutstandingamt(double outstandingamt)
+    public void setOutstandingamt(Double outstandingamt)
     {
         this.outstandingamt = outstandingamt;
     }
